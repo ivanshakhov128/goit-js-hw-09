@@ -19,9 +19,9 @@ form.addEventListener('submit', handleSubmit);
 
 function handleInput(event) {
   if (event.target.name === 'email') {
-    formData.email = event.target.value;
+    formData.email = event.target.value.trim();
   } else if (event.target.name === 'message') {
-    formData.message = event.target.value;
+    formData.message = event.target.value.trim();
   }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
